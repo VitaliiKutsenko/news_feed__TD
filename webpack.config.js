@@ -34,14 +34,14 @@ module.exports = {
 			template: path.resolve(__dirname, "./index.html"),
 		}),
 		new CleanWebpackPlugin(),
-		new copyWebpackPlugin({
-			patterns: [
-				{
-					from: path.resolve(__dirname, "./src/icon/favicon.ico"),
-					to: path.resolve(__dirname, "dist"),
-				},
-			],
-		}),
+		// new copyWebpackPlugin({
+		// 	patterns: [
+		// 		{
+		// 			from: path.resolve(__dirname, "./src/icon/favicon.ico"),
+		// 			to: path.resolve(__dirname, "dist"),
+		// 		},
+		// 	],
+		// }),
 		// new UnusedFilesWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			// filename: "bundle.[hash].css",
