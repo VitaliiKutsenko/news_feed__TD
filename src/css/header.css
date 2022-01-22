@@ -1,0 +1,47 @@
+@import "burger-menu.css";
+.head {
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    width: 1140px;
+    height: 60px;
+    z-index: 1;
+    background: #FFFFFF;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: stretch;*/
+    display: grid;
+    grid-template-areas: 'logo search btn';
+    grid-template-columns: 100px 350px 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 0 60px;
+
+}
+
+.head h1 {
+    grid-area: logo;
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    text-align: center;
+}
+
+#search-input {
+    grid-area: search;
+    width: 350px;
+    height: 32px;
+    background: #F2F2F2;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    padding-left: 48px;
+    margin-left:70px ;
+}
+
+.head label {
+}

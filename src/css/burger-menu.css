@@ -1,0 +1,178 @@
+.burger-menu {
+    grid-area: btn;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-self: end;
+    left: 0;
+}
+
+.burger-menu__content {
+    display: flex;
+    position: relative;
+    width: 317px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    visibility: hidden;
+    transform: translateX(0);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.burger-menu__content.active {
+    transition: 0.5s ease-in-out;
+    transform: translateX(-50px);
+    visibility: visible;
+    opacity: 1;
+}
+
+.burger-menu-nav {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+.burger-menu-nav:hover{
+    cursor: pointer;
+}
+.burger-menu-nav.active{
+    color: #2F80ED;
+}
+.categories-menu {
+    background: #FFFFFF;
+    transform: translateY(10px);
+    box-shadow: 0 0 4px #BDBDBD;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-items: center;
+    width: 220px;
+    height: 70px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    z-index: 5;
+    cursor: default;
+}
+
+.categories-menu:before {
+    background: #FFFFFF;
+    box-shadow: inset 1px 1px 1px 0 rgba(189, 189, 189, 0.29);
+    top: -5px;
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: none;
+    transform: rotate(45deg);
+}
+
+.categories-menu.active {
+    transition: 0.3s ease-in-out;
+    transform: translateY(30px);
+    height: 113px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.categories-menu__right {
+    list-style: none;
+}
+
+.categories-menu__left {
+    list-style: none;
+}
+
+.categories-menu li a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    color: black;
+}
+.categories-menu li a:hover{
+    color: #2F80ED;
+}
+.categories-menu li a :visited {
+    color: black;
+}
+
+.trending {
+    padding-left: 60px;
+    text-decoration: none;
+    color: black;
+}
+/*-------------BURGER_Button*/
+.burger-menu__btn {
+
+    background: none;
+    border: 0;
+    position: relative;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.burger-menu__styleBtn{
+    position: absolute;
+    left: 3px;
+    bottom: 6px;
+    background: black;
+    width: 18px;
+    height: 2px;
+    transition: 0.4s linear;
+    transition-delay: 0.1s;
+}
+.burger-menu__styleBtn.active{
+    transition: 0.4s linear;
+    transition-delay: 0.1s;
+    transform: translateY(-5px) rotate(135deg);
+}
+.burger-menu__styleBtn:before {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    content: '';
+    background: black;
+    width: 18px;
+    height: 2px;
+    transition: 0.4s linear;
+    transition-delay: 0.2s;
+}
+.burger-menu__styleBtn.active:before {
+    transition: 0.4s linear;
+    transition-delay: 0.2s;
+    transform: translateY(10px) rotate(90deg);
+}
+.burger-menu__styleBtn:after {
+    position: absolute;
+    transform: translateY(-5px);
+    right: 0;
+    content: '';
+    background: black;
+    width: 18px;
+    height: 2px;
+    opacity: 1;
+    transition: 0.1s linear;
+    transition-delay: 0.3s;
+}
+.burger-menu__styleBtn.active:after{
+    transition: 0.1s linear;
+    transition-delay: 0.3s;
+    opacity: 0;
+    /*transform: translateY(-50px);*/
+}
+
+
+
+
+
+
+
+

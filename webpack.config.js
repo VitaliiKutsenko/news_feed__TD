@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const copyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
@@ -34,18 +34,18 @@ module.exports = {
 			template: path.resolve(__dirname, "./index.html"),
 		}),
 		new CleanWebpackPlugin(),
-		// new copyWebpackPlugin({
-		// 	patterns: [
-		// 		{
-		// 			from: path.resolve(__dirname, "./src/icon/favicon.ico"),
-		// 			to: path.resolve(__dirname, "dist"),
-		// 		},
-		// 	],
-		// }),
+		new copyWebpackPlugin({
+			patterns: [
+				{
+					from: path.resolve(__dirname, "./src/icon/favicon.ico"),
+					to: path.resolve(__dirname, "dist"),
+				},
+			],
+		}),
 		// new UnusedFilesWebpackPlugin(),
 		new MiniCssExtractPlugin({
-			// filename: "bundle.[hash].css",
-			filename: "style.css",
+			filename: "bundle.[hash].css",
+			// filename: "style.css",
 		}),
 	],
 	module: {
@@ -59,9 +59,14 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(png|svg|ico|jpeg)$/i,
+				test: /\.(woff(2)?|ttf|eot|png|svg|ico|jpeg)(\?v=\d+\.\d+\.\d+)?$/i,
 				use: [
-					"file-loader",
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]'
+						}
+					},
 					{
 						loader: "image-webpack-loader",
 						options: {
@@ -75,3 +80,4 @@ module.exports = {
 		],
 	},
 };
+

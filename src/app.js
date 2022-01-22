@@ -1,6 +1,20 @@
-const API_KEY = '5ef33414-1934-47dc-9892-5d09ab7c00da'
+import './style.css'
 
-const promise = fetch(`https://content.guardianapis.com/search?q=trending&show-tags=all&page-size=20&show-fields=all&order-by=relevance&api-key=${API_KEY}`)
-promise
-	.then(response => response.json())
-	.then(item => console.log(item))
+
+import API from "./API.js";
+import CONTROLLER from './CONTROLLER'
+import ROUT from './ROUT.js'
+import VIEW from "./VIEW";
+import {store} from "./store";
+
+(async () => {
+	try {
+		const root = document.querySelector('.post-list')
+		const resp = await API.response()
+		VIEW.renderCards(store)
+		ROUT.init()
+
+	}catch (e) {
+		alert('ERROR' + e.message)
+	}
+})()

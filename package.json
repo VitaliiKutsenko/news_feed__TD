@@ -2,7 +2,7 @@
   "name": "news_feed__td",
   "version": "1.0.0",
   "description": "create news feed",
-  "main": "src/app.js",
+  "main": "src/old/app111.js",
   "scripts": {
     "test": "run",
     "start": "webpack serve",

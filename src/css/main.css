@@ -1,0 +1,10 @@
+@import 'card.css';
+@import 'page.css';
+.main{
+    background: #FFFFFF;
+    width: 1140px;
+    height: 100%;
+    grid-area: main;
+    position: relative;
+    /*overflow: auto;*/
+}

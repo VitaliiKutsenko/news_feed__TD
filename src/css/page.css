@@ -1,0 +1,5 @@
+.post-list.page {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
