@@ -1,6 +1,5 @@
 import {store} from "./store";
-import {dataFix} from "./dataFix";
-
+import helper from "./helper";
 export default {
 	API_KEY: '5ef33414-1934-47dc-9892-5d09ab7c00da',
 	URL: 'https://content.guardianapis.com/',
@@ -9,7 +8,7 @@ export default {
 			const promise = fetch(`
 			${this.URL}search?q=trending
 			&show-tags=all
-			&page-size=20
+			&page-size=19
 			&show-fields=all
 			&order-by=relevance
 			&api-key=${this.API_KEY}
@@ -25,9 +24,9 @@ export default {
 let num = {nums:Infinity,item:0}
 const collectData = (data) => {
 	return data.map((item,index) => {
-	item.publishAgo = dataFix(item.webPublicationDate)
-		if(parseInt(dataFix(item.webPublicationDate).daysAgo) < num.nums){
-			num.nums = parseInt(dataFix(item.webPublicationDate).daysAgo)
+	item.publishAgo = helper.dataFix(item.webPublicationDate)
+		if(parseInt(item.publishAgo.daysAgo) < num.nums){
+			num.nums = parseInt(item.publishAgo.daysAgo)
 			num.item = index
 		}
 

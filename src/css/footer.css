@@ -2,13 +2,10 @@
     grid-area: footer;
     display: flex;
     background: #FFFFFF;
-    /*margin-top: auto ;*/
     bottom: 0;
     border: 1px solid #E8E8E8;
     width: 1140px;
     height: 60px;
-
-
     justify-content: start;
     align-items: center;
     padding: 0 60px;

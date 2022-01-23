@@ -1,5 +1,100 @@
 .post-list.page {
-    display: flex;
+    width: 1140px;
     flex-direction: column;
     padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.post-list.page article {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.post-list.page header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-list.page header h2 {
+    padding: 61px 186px 0 186px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 54px;
+}
+
+.post-list.page header div {
+    padding-left: 186px;
+    padding-top: 19px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.post-list.page header div p:nth-child(1) {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2D3748;
+}
+
+.post-list.page header div p:nth-child(2) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    padding-left: 10px;
+    color: #718096;
+}
+
+.post-list.page header img {
+    width: 1020px;
+    height: 380px;
+    object-fit: cover;
+}
+
+.post-list.page .pages {
+    width: inherit;
+    padding:  31px 186px;
+    max-width: inherit;
+    /*padding-top: 37px;*/
+    /*margin-top: 31px;*/
+    border-top: 1px solid #E8E7E7;
+}
+
+.post-list.page main > p {
+    font-family: "SegoeUI";
+    text-indent: 1.5em;
+    text-align: justify;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #718096;
+}
+.post-list.page main p a{
+    color: darkcyan;
+}
+
+.post-list.page main aside {
+    max-width: inherit;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.post-list.page main figure {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
 }

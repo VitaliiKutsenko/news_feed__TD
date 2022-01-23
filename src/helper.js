@@ -1,15 +1,15 @@
-export const dataFix = (createdTime) => {
-	const currentTime = new Date()
-	const calcTime = new Date(Date.parse(createdTime))
-	const time = getTime(calcTime, currentTime)
-	return {
-		date: `(${Object.values(time)} ${Object.keys(time)} ago)`,
-		daysAgo: 	Math.floor(Math.abs(currentTime.getTime() - calcTime.getTime()) / (1000 * 3600 * 24)) +' '+ 'days ago'
+export default {
+	dataFix(createdTime) {
+		const currentTime = new Date()
+		const calcTime = new Date(Date.parse(createdTime))
+		const time = this.getTime(calcTime, currentTime)
+		return {
+			date: `(${Object.values(time)} ${Object.keys(time)} ago)`,
+			daysAgo: 	Math.floor(Math.abs(currentTime.getTime() - calcTime.getTime()) / (1000 * 3600 * 24)) +' '+ 'days ago'
 
-	}
-}
-
-function getTime(calcTime, currentTime) {
+		}
+	},
+	getTime(calcTime, currentTime) {
 	if (calcYear()) return {'years': calcYear()}
 	if (calcMonths()) return {'months': calcMonths()}
 	if (parseInt(calcDays())) return {'days': parseInt(calcDays())}
@@ -40,5 +40,15 @@ function getTime(calcTime, currentTime) {
 	function calcSeconds() {
 		return parseInt(calcDays() * 86400)
 	}
-}
+},
+	fixTimeFormat(time){
+		const formatOptions = {
+			weekday: 'long',
+			month: 'long',
+			day: 'numeric'
+		};
+		const times = new Date(Date.parse(time))
+			return times.toLocaleDateString('en-US', formatOptions).replace(',',' ')
+	}
 
+}

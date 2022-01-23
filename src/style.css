@@ -98,3 +98,31 @@ body{
     transform: rotateX(90deg) translateZ(-50px);
 }
 
+/*-----------------btn-scroll-up*/
+.btn-scroll-up {
+    position: fixed;
+    z-index: 1000;
+    top: 600px;
+    right: 280px;
+    background: #2F80ED;
+    border-radius: 5px;
+    border: none;
+    width: 141px;
+    height: 37px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: 0s linear;
+    overflow: hidden;
+}
+.btn-scroll-up.active{
+    transition: 0.4s linear;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0px);
+ }

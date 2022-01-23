@@ -3,13 +3,11 @@
     grid-area: header;
     position: fixed;
     top: 0;
+    margin: 0 auto;
     width: 1140px;
     height: 60px;
     z-index: 1;
     background: #FFFFFF;
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: stretch;*/
     display: grid;
     grid-template-areas: 'logo search btn';
     grid-template-columns: 100px 350px 1fr;
@@ -29,6 +27,11 @@
     color: #000000;
     text-align: center;
 }
+/*.head h1 a {*/
+/*    font-size: inherit;*/
+/*    color: inherit;*/
+/*    text-decoration: none;*/
+/*}*/
 
 #search-input {
     grid-area: search;
