@@ -1,4 +1,6 @@
 @import "burger-menu.css";
+@import "search-window.css";
+
 .head {
     grid-area: header;
     position: fixed;
@@ -27,11 +29,16 @@
     color: #000000;
     text-align: center;
 }
-/*.head h1 a {*/
-/*    font-size: inherit;*/
-/*    color: inherit;*/
-/*    text-decoration: none;*/
-/*}*/
+
+.head h1 a {
+    text-decoration: none;
+    font-weight: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+/*----------------search*/
 
 #search-input {
     grid-area: search;
@@ -43,8 +50,124 @@
     border: none;
     font-size: 14px;
     padding-left: 48px;
-    margin-left:70px ;
+    margin-left: 70px;
 }
 
 .head label {
+    display: flex;
+    align-items: center;
+}
+
+.head label .search-btn {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    display: block;
+    transform: translateX(85px);
+    cursor: pointer;
+    border: none;
+}
+
+.head label .search-btn img {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    display: block;
+    transform: scale(-1, 1);
+
+
+}
+
+.head label .search-btn img:after {
+    content: '\1F50D' attr(alt);
+    font-size: 16px;
+    color: rgb(100, 100, 100);
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+}
+
+/*----------------clear-btn*/
+
+.search-btn__clear {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    transform: translate(340px, 2px) rotate(45deg);
+    background: none;
+    border: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.search-btn__clear.active {
+    visibility: visible;
+    transform: translateX(320px) rotate(-45deg);
+    opacity: 1;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.search-btn__clear.active:hover::before {
+    background-color: #ce1515;
+}
+
+.search-btn__clear.active:hover::after {
+    background-color: #ce1515;
+
+}
+
+.search-btn__clear::before {
+    border: none;
+    margin: 0 auto;
+    content: '';
+    width: 22px;
+    height: 4px;
+    background: black;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    border-radius: 20px;
+}
+
+.search-btn__clear::after {
+    border: none;
+    background: black;
+    border-radius: 20px;
+    content: '';
+    width: 4px;
+    height: 22px;
+    position: absolute;
+    top: 0;
+    left: 9px;
+}
+
+
+
+
+
+input[type=text]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+input[type=text]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+#search-input::-ms-clear {
+    display: none;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
 }

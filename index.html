@@ -3,59 +3,63 @@
 <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<!--    <link rel="manifest" href="/manifest.webmanifest">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Document</title>
 </head>
 <body>
 <div class="root">
     <header class="head">
-        <h1><a href="#news" data-role="nav-news">News App</a> </h1>
+        <h1><a href="#news" data-role="nav-news">News App</a></h1>
         <label for="search-input">
+            <button class="search-btn"><img src="icons8-search-50.png" alt=""></button>
             <input id="search-input"
                    type="search"
                    name=""
+                   autocomplete="off"
                    placeholder="Type something to start search"
             />
+            <button class="search-btn__clear"></button>
+
         </label>
-    <nav class="burger-menu">
-        <div class="burger-menu__content">
-            <div class="burger-menu-nav">Categories
-                <div class="categories-menu">
-                    <ul class="categories-menu__left">
-                        <li class="burger-menu-categories"><a href="#">Sport</a></li>
-                        <li class="burger-menu-categories"><a href="#">World</a></li>
-                        <li class="burger-menu-categories"><a href="#">Covid</a></li>
-                        <li class="burger-menu-categories"><a href="#">Business</a></li>
-                    </ul>
-                    <ul class="categories-menu__right">
-                        <li class="burger-menu-categories"><a href="#">Politics</a></li>
-                        <li class="burger-menu-categories"><a href="#">Science</a></li>
-                        <li class="burger-menu-categories"><a href="#">Religion</a></li>
-                        <li class="burger-menu-categories"><a href="#">Health</a></li>
+        <article class="search-window">
+        </article>
+        <nav class="burger-menu">
+            <div class="burger-menu__content">
+                <div class="burger-menu-nav">Categories
+                    <div class="categories-menu">
+                        <ul class="categories-menu__left">
+                            <li class="burger-menu-categories"><a href="#">Sport</a></li>
+                            <li class="burger-menu-categories"><a href="#">World</a></li>
+                            <li class="burger-menu-categories"><a href="#">Covid</a></li>
+                            <li class="burger-menu-categories"><a href="#">Business</a></li>
+                        </ul>
+                        <ul class="categories-menu__right">
+                            <li class="burger-menu-categories"><a href="#">Politics</a></li>
+                            <li class="burger-menu-categories"><a href="#">Science</a></li>
+                            <li class="burger-menu-categories"><a href="#">Religion</a></li>
+                            <li class="burger-menu-categories"><a href="#">Health</a></li>
 
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <a href="#" class="trending">⚡️ Trending news</a>
-        </div>
-        <button class="burger-menu__btn"><span class="burger-menu__styleBtn"></span></button>
-    </nav>
+                <a href="#" class="trending">⚡️ Trending news</a>
+            </div>
+            <button class="burger-menu__btn"><span class="burger-menu__styleBtn"></span></button>
+        </nav>
     </header>
     <main class="main">
-    <div class="post-list">
-        <div class="preloader">
-            <div class="top"> Hello</div>
-            <div class="bot"></div>
-            <ul>
-                <li style="--i:0">Load...</li>
-                <li style="--i:1">Whait</li>
-                <li style="--i:2">Жди</li>
-                <li style="--i:3">Load</li>
-            </ul>
+        <div class="post-list">
         </div>
-    </div>
+        <div class="search-words">
+            <label for="page-search">
+                <input type="search"
+                       placeholder="Enter some words"
+                       autocomplete="off"
+                       id="page-search">
+            </label>
+            <span class="count-words"></span>
+        </div>
         <button class="btn-scroll-up">
             <span>Scroll to top</span>
             <span>&#8593</span>

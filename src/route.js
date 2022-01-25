@@ -1,4 +1,4 @@
-import CONTROLLER from './CONTROLLER'
+import controller from './controller'
 const getRouteInfo = () => {
 	const hash = location.hash ? location.hash.slice(1) : "";
 	const [name, ...id] = hash.split('/')
@@ -7,8 +7,8 @@ const getRouteInfo = () => {
 const handleHash = () => {
 	const {name, params} = getRouteInfo()
 	if (name) {
-		const routName = name + 'Route'
-		CONTROLLER[routName](params)
+		const routeName = name + 'Route'
+		controller[routeName](params)
 	}
 }
 

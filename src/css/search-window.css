@@ -1,0 +1,88 @@
+.search-window {
+    box-sizing: border-box;
+    width: 450px;
+    height: 50vh;
+    position: absolute;
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.64);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    left: 60px;
+    top: 60px;
+    box-shadow: 0px 5px 4px rgb(221 221 221);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: 0.5s linear;
+}
+
+.search-window.active {
+    transition: 0.5s linear;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+}
+.search-window.active.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.search-window.active.error:before {
+   content: 'No exact matches found';
+    font-size: 28px ;
+
+}
+.search-window.active.error:after {
+    content: ' \2639';
+    font-size: 40px ;
+}
+.prev-section {
+    max-width: 450px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    text-align: justify;
+    border-bottom: 2px solid rgba(178, 154, 154, 0.34);
+}
+
+.prev-header {
+
+}
+
+.prev-link {
+
+}
+
+.prev-link img {
+    max-width: 70px;
+    max-height: 70px;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.64);;
+}
+
+.prev-main {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.prev-name {
+
+}
+
+.news {
+
+}
+
+.prev-post {
+
+}

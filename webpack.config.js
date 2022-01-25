@@ -59,7 +59,7 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(woff(2)?|ttf|eot|png|svg|ico|jpeg)(\?v=\d+\.\d+\.\d+)?$/i,
+				test: /\.(woff(2)?|ttf|eot|png|svg|ico|jpeg|jpg)(\?v=\d+\.\d+\.\d+)?$/i,
 				use: [
 					{
 						loader: 'file-loader',
