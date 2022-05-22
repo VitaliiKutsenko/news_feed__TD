@@ -1,5 +1,4 @@
 export const store = {
-
 	data: [],
 	prevPage: [],
 	status: true,

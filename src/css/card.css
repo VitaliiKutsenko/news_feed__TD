@@ -53,9 +53,6 @@
     line-height: 36px;
     height: 38px;
     overflow: hidden;
-
-    /* 800 */
-
     color: #2D3748;
 }
 
@@ -176,7 +173,7 @@
 .post-card__time__container span:nth-child(2) {
     color: #4f1212;
     position: absolute;
-    transform: translate(-15px, 25px);
+    transform: translate(-15px, 15px);
     width: 300px;
     height: 40px;
     display: flex;
@@ -184,9 +181,15 @@
     padding-left: 10px;
     font-size: 14px;
 }
+.post-card__viewed__active:before {
+    content: "Vieved:";
+    margin-left: 5px;
+    padding-right: 5px;
+}
 
 .post-card__viewed__active {
-    background: linear-gradient(cornflowerblue, dodgerblue);
+    display: block;
+    transform: translateY(5px);
     border-radius: 5px;
 
 }

@@ -1,7 +1,7 @@
 @import 'card.css';
 @import 'page.css';
 .main{
-    background: #FFFFFF;
+    background: #f0f0f0;
     width: 1140px;
     height: 100%;
     grid-area: main;

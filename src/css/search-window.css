@@ -4,12 +4,12 @@
     height: 50vh;
     position: absolute;
     overflow: auto;
-    background: rgba(255, 255, 255, 0.64);
-    backdrop-filter: blur(2px);
+    background: #f0f0f0;
+    padding: 20px;
+    border: 2px solid rgba(145, 145, 145, 0.32);
     border-radius: 5px;
     left: 60px;
     top: 60px;
-    box-shadow: 0px 5px 4px rgb(221 221 221);
     visibility: hidden;
     opacity: 0;
     transform: translateY(-50px);
@@ -49,14 +49,6 @@
     border-bottom: 2px solid rgba(178, 154, 154, 0.34);
 }
 
-.prev-header {
-
-}
-
-.prev-link {
-
-}
-
 .prev-link img {
     max-width: 70px;
     max-height: 70px;
@@ -73,16 +65,4 @@
     padding: 5px;
     margin: 0 auto;
     overflow: hidden;
-}
-
-.prev-name {
-
-}
-
-.news {
-
-}
-
-.prev-post {
-
 }

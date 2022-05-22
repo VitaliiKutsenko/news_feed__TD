@@ -9,7 +9,7 @@
     width: 1140px;
     height: 60px;
     z-index: 1;
-    background: #FFFFFF;
+    background: #f0f0f0;
     display: grid;
     grid-template-areas: 'logo search btn';
     grid-template-columns: 100px 350px 1fr;

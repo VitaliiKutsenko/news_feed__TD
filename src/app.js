@@ -4,7 +4,6 @@ import route from './route.js'
 import view from "./view";
 import {store} from "./store";
 import {listenClearBtn, listenSearchBtn, listenSearchInput} from "./search.js";
-import {searchOnPlace} from "./searchOnPage";
 import {burgerMenu} from "./burgerMenu";
 
 const parseData = async (param = 'trendings',storePlace = 'data') => {

@@ -18,6 +18,7 @@
 }
 
 body {
+    background: #f0f0f0;
     height: 100vh;
 }
 
@@ -27,67 +28,67 @@ body {
     height: 100%;
     position: relative;
     display: grid;
-    /*overflow: auto;*/
     grid-template-areas: "header" "main" "footer";
     grid-template-rows: auto 1fr auto;
 }
-
-.preloader {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    top: 100px;
-    transform-style: preserve-3d;
-    animation: preload 1s linear infinite;
-}
-
-.preloader ul {
-    list-style: none;
+.preloader{
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d;
-
+bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.preloader ul li {
+@keyframes preload {
+    0%,10%{
+        background: conic-gradient(#201b1b,transparent 100%, rgba(255, 255, 255, 0));
+        transform:  rotate(0deg) scale(1,1);
+    }
+    20%,30%{
+        background: conic-gradient(#201b1b,transparent 80%, rgba(255, 255, 255, 0));
+        transform:  rotate(90deg) scale(1,1);
+    }
+    40%,50%{
+        background: conic-gradient(#201b1b,transparent 60%, rgba(255, 255, 255, 0));
+        transform:  rotate(180deg) scale(1,1);
+    }
+    60%,70%{
+        background: conic-gradient(#201b1b,transparent 60%, rgba(255, 255, 255, 0));
+        transform:  rotate(270deg) scale(1,1);
+    }
+    80%,90%{
+        background: conic-gradient(#201b1b,transparent 80%, rgba(255, 255, 255, 0));
+        transform:  rotate(360deg) scale(1,1);
+    }
+    100%{
+        background: conic-gradient(#201b1b,transparent 80%, rgba(255, 255, 255, 0));
+        transform:  rotate(0deg) scale(1,1);
+    }
+}
+.preloader .ouyBox{
+    position: relative;
+    flex-direction: row;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    border: 1px outset black;
-    font-size: 30px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(250, 250, 250, 0.98);
-    transform: rotateY(calc(90deg * var(--i))) translateZ(60px);
-}
-.preloader ul li:nth-child(3){
-    font-size: 20px;
-    text-align: center;
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    border-radius:50% ;
+    animation: preload 3s infinite;
 }
 
+.preloader .innerBox{
+    width: 180px;
+    height: 180px;
+    background: white;
+    border-radius:50% ;
 
-@keyframes preload {
-    0% {
-        transform: rotateY(0deg) rotateX(10deg);
+    /*animation: preload 5s infinite reverse ;*/
 
-    }
-    50% {
-        transform: rotateY(180deg) rotateX(15deg);
-
-    }
-    100% {
-        transform: rotateY(360deg) rotateX(10deg);
-    }
 }
-
 .top {
-
     position: absolute;
     top: 0;
     left: 0;
@@ -114,11 +115,11 @@ body {
     position: fixed;
     z-index: 1000;
     top: 600px;
-    right: 280px;
+    right: 20px;
     background: #2F80ED;
     border-radius: 5px;
     border: none;
-    width: 141px;
+    width: 121px;
     height: 37px;
     font-style: normal;
     font-weight: bold;
@@ -128,7 +129,7 @@ body {
     visibility: hidden;
     opacity: 0;
     transform: translateX(10px);
-    transition: 0s linear;
+    transition: 0.4s linear;
     overflow: hidden;
 }
 

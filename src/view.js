@@ -4,20 +4,15 @@ export default {
 	appPreloader() {
 		document.querySelector('.post-list').innerHTML = `
 		 <div class="preloader">
-            <div class="top"></div>
-            <div class="bot"></div>
-            <ul>
-                <li style="--i:0">Load...</li>
-                <li style="--i:1">Wait!</li>
-                <li style="--i:2">Two \n  thousand \n years \n later</li>
-                <li style="--i:3">Loading</li>
-            </ul>
+            <div class="ouyBox">
+                <div class="innerBox"></div>
+
+            </div>
         </div>
 		`
 	},
 
 	createPage(page) {
-		console.log(page.pageInputData)
 		const postList = document.querySelector('.post-list')
 		postList.classList.add('page')
 		document.querySelector('.search-words').classList.add('active')
